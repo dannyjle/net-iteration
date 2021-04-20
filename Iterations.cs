@@ -99,7 +99,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch)
         {
-            throw new System.NotImplementedException();
+            var newListForYearToMatch = movies.Where(movie => movie.Year == yearToMatch && movie.Score > 90).Select(movie => movie.Name);
+            return newListForYearToMatch;
         }
 
 
