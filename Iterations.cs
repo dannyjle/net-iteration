@@ -67,7 +67,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenSurvive(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+            var newListOfNumbers = numbers.Where(number => number % 2 == 0);
+            return newListOfNumbers;
         }
 
 
